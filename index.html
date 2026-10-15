@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f8e9c9">
+<title>สวนสวรรค์ไทย — ปลูกพืชเซียน</title>
+<style>
+:root{--ink:#4a321d;--gold:#b9822c;--gold2:#f5d88d;--cream:#fff8e9;--leaf:#477a48;--pink:#d96f9b;--panel:rgba(255,249,232,.94)}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Thai",sans-serif;color:var(--ink);background:linear-gradient(180deg,#b9e7ef 0%,#f5e5ce 55%,#f8efd9 100%);min-height:100vh}
+button{font:inherit;cursor:pointer;touch-action:manipulation;border:0}
+.top{padding:14px 16px 8px;text-align:center;background:linear-gradient(120deg,#fff4d9,#f4d48c);border-bottom:3px solid #c89b4b}
+.brand{font-size:clamp(24px,5vw,38px);font-weight:900;color:#7c4c1d;text-shadow:0 2px #fff2c8}.subtitle{font-size:13px;letter-spacing:.04em}
+.stats{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:10px}.stat{background:#fff9e9;border:1px solid #d7b36b;border-radius:999px;padding:6px 12px;font-weight:800;font-size:14px}
+main{max-width:1100px;margin:auto;padding:12px;display:grid;grid-template-columns:1.5fr 1fr;gap:12px}
+.panel{background:var(--panel);border:2px solid #d4ae68;border-radius:18px;box-shadow:0 5px 14px #72502a18;overflow:hidden}.panel h2{margin:0;padding:10px 13px;background:linear-gradient(90deg,#f8dfa0,#fff0c8);font-size:18px}.inner{padding:12px}
+.sky-scene{position:relative;min-height:260px;overflow:hidden;background:linear-gradient(#8ed8e8,#d9f2e9 60%,#b9dfac);border-radius:14px;border:2px solid #fff5d5}
+.cloud{position:absolute;background:#fff8ed;border-radius:50px;opacity:.8;width:100px;height:28px;box-shadow:20px -12px 0 5px #fff8ed,45px 0 0 0 #fff8ed}
+.cloud.c1{top:30px;left:8%}.cloud.c2{top:70px;right:7%;transform:scale(.8)}
+.sun{position:absolute;right:16%;top:16px;width:56px;height:56px;border-radius:50%;background:#ffeaa1;box-shadow:0 0 35px #fff2ac}
+.temple{position:absolute;left:50%;top:26px;transform:translateX(-50%);font-size:58px;filter:drop-shadow(0 3px 1px #8c6b38)}
+.goddess{position:absolute;left:16px;bottom:40px;font-size:70px;filter:drop-shadow(0 4px 2px #7b5b3d44)}
+.animal{position:absolute;right:16px;bottom:28px;font-size:48px}
+.farm{position:absolute;left:19%;right:17%;bottom:18px;height:105px;background:#8e6339;border:5px solid #c99a55;border-radius:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:5px;padding:7px;transform:perspective(250px) rotateX(8deg)}
+.plot{border:2px solid #d7b77b;border-radius:8px;background:linear-gradient(#8b633c,#65462b);display:flex;align-items:center;justify-content:center;font-size:28px;position:relative;min-width:0}
+.plot.ready{background:linear-gradient(#b8d77c,#7ca553);box-shadow:inset 0 0 0 2px #f9df8b}
+.plot small{position:absolute;bottom:2px;left:0;right:0;text-align:center;font-size:9px;color:white;text-shadow:0 1px #333}
+.scene-caption{position:absolute;top:8px;left:8px;background:#fff9e6d9;padding:5px 9px;border-radius:999px;font-size:12px;font-weight:700}
+.actions{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.action{padding:12px 6px;border-radius:12px;background:linear-gradient(#fff1c8,#e9c47a);border:1px solid #c89a4a;color:#553818;font-weight:800;min-height:70px}.action span{display:block;font-size:24px;margin-bottom:3px}
+.crop-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.crop{padding:10px 8px;border:1px solid #dfc58f;border-radius:12px;background:#fffdf4;text-align:center}.crop .emoji{font-size:32px}.crop strong{display:block}.crop p{font-size:12px;margin:4px 0 8px;color:#765a38}.goldbtn,.softbtn{padding:8px 10px;border-radius:9px;font-weight:800;width:100%}.goldbtn{background:linear-gradient(#e9bd5c,#c98c2e);color:#fff}.softbtn{background:#e6f0d7;color:#426b37;border:1px solid #b5cf98}
+.pet-card{display:flex;gap:12px;align-items:center;background:#fffdf3;border:1px solid #dfc58f;border-radius:12px;padding:10px}.pet-art{font-size:48px}.pet-card p{margin:3px 0;font-size:12px}.progress{height:8px;border-radius:99px;background:#eadfc8;overflow:hidden;margin:6px 0}.progress div{height:100%;width:100%;background:#8bb56a}
+.log{font-size:13px;line-height:1.6;max-height:100px;overflow:auto}.footer{text-align:center;font-size:12px;padding:4px 12px 18px;color:#775c3b}
+@media(max-width:720px){main{grid-template-columns:1fr;padding:9px}.sky-scene{min-height:245px}.goddess{font-size:58px}.farm{left:18%;right:16%;height:96px}.panel h2{font-size:17px}.actions{gap:6px}.action{font-size:13px}.stat{font-size:12px;padding:5px 9px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">✨ สวนสวรรค์ไทย ✨</div>
+  <div class="subtitle">ปลูกพืชเซียน • เลี้ยงสัตว์สวรรค์ • สร้างแดนทิพย์</div>
+  <div class="stats">
+    <div class="stat">🪙 เหรียญ <span id="coins">120</span></div>
+    <div class="stat">🌱 พลังเซียน <span id="qi">0</span></div>
+    <div class="stat">⭐ ระดับ <span id="level">1</span></div>
+  </div>
+</header>
+<main>
+<section class="panel">
+  <h2>🌸 ดินแดนสวนสวรรค์ของคุณ</h2>
+  <div class="inner">
+    <div class="sky-scene">
+      <div class="sun"></div><div class="cloud c1"></div><div class="cloud c2"></div>
+      <div class="temple">🏯</div>
+      <div class="scene-caption">แดนทิพย์ • สวนบัวเมฆา</div>
+      <div class="goddess">🧚🏻‍♀️</div><div class="animal" id="petScene">🦌</div>
+      <div class="farm" id="farm">
+        <button class="plot" data-plot="0" aria-label="แปลงที่ 1">🟫<small>แปลงว่าง</small></button>
+        <button class="plot" data-plot="1" aria-label="แปลงที่ 2">🟫<small>แปลงว่าง</small></button>
+        <button class="plot" data-plot="2" aria-label="แปลงที่ 3">🟫<small>แปลงว่าง</small></button>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="action" id="plantBtn"><span>🌱</span>ปลูกพืช</button>
+      <button class="action" id="waterBtn"><span>💧</span>รดน้ำ</button>
+      <button class="action" id="harvestBtn"><span>🧺</span>เก็บเกี่ยว</button>
+    </div>
+    <p style="font-size:12px;margin:10px 2px 0">วิธีเล่น: เลือกพืชด้านขวา → แตะแปลง → รดน้ำ → รอให้โต → เก็บเกี่ยวเพื่อรับเหรียญและพลังเซียน</p>
+  </div>
+</section>
+<section class="panel">
+  <h2>🌿 พืชเซียนที่ปลูกได้</h2>
+  <div class="inner"><div class="crop-grid" id="cropGrid"></div></div>
+</section>
+<section class="panel">
+  <h2>🦌 สัตว์สวรรค์</h2>
+  <div class="inner">
+    <div class="pet-card"><div class="pet-art">🦌</div><div style="flex:1"><strong>กวางแก้ว</strong><p>สัตว์มงคลแห่งสวนสวรรค์</p><div class="progress"><div id="petProgress"></div></div><p id="petStatus">พร้อมมอบน้ำค้างทิพย์</p></div></div>
+    <button class="goldbtn" style="margin-top:9px" id="petBtn">เก็บน้ำค้างทิพย์ (+15 เหรียญ)</button>
+  </div>
+</section>
+<section class="panel">
+  <h2>📜 บันทึกจากสวรรค์</h2>
+  <div class="inner"><div class="log" id="log">ยินดีต้อนรับนางสวรรค์! เริ่มต้นสร้างสวนทิพย์ของคุณได้เลย 🌸</div><button class="softbtn" id="resetBtn" style="margin-top:8px">เริ่มเกมใหม่</button></div>
+</section>
+</main>
+<div class="footer">เกมต้นแบบสำหรับทดลองเล่น • ความคืบหน้าบันทึกในเบราว์เซอร์เครื่องนี้</div>
+<script>
+const crops=[
+ {id:"lotus",name:"บัวสวรรค์",emoji:"🪷",cost:10,time:12,reward:28,qi:3,desc:"ดอกบัวแห่งความสงบ"},
+ {id:"rice",name:"ข้าวทิพย์",emoji:"🌾",cost:8,time:9,reward:22,qi:2,desc:"รวงทองแห่งแดนฟ้า"},
+ {id:"herb",name:"สมุนไพรเซียน",emoji:"🌿",cost:12,time:15,reward:35,qi:5,desc:"พลังปราณเข้มข้น"},
+ {id:"mushroom",name:"เห็ดจันทรา",emoji:"🍄",cost:7,time:8,reward:19,qi:2,desc:"เติบโตใต้แสงจันทร์"}
+];
+const defaultState=()=>({coins:120,qi:0,level:1,selected:"lotus",plots:[null,null,null],petReady:true,log:["ยินดีต้อนรับนางสวรรค์! เริ่มต้นสร้างสวนทิพย์ของคุณได้เลย 🌸"]});
+let state;
+try{state=JSON.parse(localStorage.getItem("suanSawanSave"))||defaultState()}catch(e){state=defaultState()}
+const $=id=>document.getElementById(id);
+function save(){try{localStorage.setItem("suanSawanSave",JSON.stringify(state))}catch(e){}}
+function say(msg){state.log.unshift(msg);state.log=state.log.slice(0,8);renderLog();save()}
+function renderLog(){$("log").innerHTML=state.log.map(x=>"• "+escapeHtml(x)).join("<br>")}
+function escapeHtml(s){return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function renderCrops(){$("cropGrid").innerHTML=crops.map(c=>`<div class="crop" style="${state.selected===c.id?"outline:3px solid #d7a84f":""}"><div class="emoji">${c.emoji}</div><strong>${c.name}</strong><p>${c.desc}<br>เมล็ด ${c.cost} เหรียญ • ${c.time} วินาที</p><button class="${state.selected===c.id?"goldbtn":"softbtn"}" data-select="${c.id}">${state.selected===c.id?"เลือกอยู่":"เลือกปลูก"}</button></div>`).join("");document.querySelectorAll("[data-select]").forEach(b=>b.onclick=()=>{state.selected=b.dataset.select;render();say("เลือกเมล็ด"+crops.find(c=>c.id===state.selected).name+"แล้ว")})}
+function renderFarm(){document.querySelectorAll("[data-plot]").forEach(b=>{let i=+b.dataset.plot,p=state.plots[i];b.classList.toggle("ready",!!p&&p.watered&&Date.now()>=p.readyAt);if(!p){b.innerHTML="🟫<small>แปลงว่าง</small>"}else{let c=crops.find(x=>x.id===p.crop),ready=p.watered&&Date.now()>=p.readyAt;b.innerHTML=(ready?c.emoji:p.watered?"🌱":"🪴")+`<small>${ready?"พร้อมเก็บ":p.watered?"กำลังเติบโต":"รดน้ำด้วย"}</small>`}})}
+function render(){ $("coins").textContent=state.coins;$("qi").textContent=state.qi;$("level").textContent=state.level;renderCrops();renderFarm();renderLog();$("petProgress").style.width=state.petReady?"100%":"35%";$("petStatus").textContent=state.petReady?"พร้อมมอบน้ำค้างทิพย์":"กำลังพักฟื้น";save()}
+function selectedPlot(){let i=state.plots.findIndex(p=>p===null);return i}
+document.querySelectorAll("[data-plot]").forEach(b=>b.onclick=()=>{const i=+b.dataset.plot,p=state.plots[i];if(!p){plant(i)}else if(p.watered&&Date.now()>=p.readyAt){harvest(i)}else if(!p.watered){water(i)}else say("พืชกำลังเติบโต รออีกสักครู่นะ")});
+function plant(i){let c=crops.find(x=>x.id===state.selected);if(state.plots[i])return say("แปลงนี้มีพืชอยู่แล้ว");if(state.coins<c.cost)return say("เหรียญไม่พอซื้อเมล็ดพันธุ์");state.coins-=c.cost;state.plots[i]={crop:c.id,watered:false,readyAt:0};say("ปลูก"+c.name+"แล้ว แตะแปลงเพื่อรดน้ำ");render()}
+function water(i){let p=state.plots[i];if(!p)return say("เลือกแปลงว่างเพื่อปลูกก่อน");if(p.watered)return say("รดน้ำไปแล้ว รอให้พืชเติบโต");p.watered=true;p.readyAt=Date.now()+crops.find(c=>c.id===p.crop).time*1000;say("รดน้ำเรียบร้อย พืชเริ่มเติบโตแล้ว 💧");render();setTimeout(()=>{renderFarm();say("พืชของคุณเติบโตเต็มที่แล้ว!");},crops.find(c=>c.id===p.crop).time*1000+100)}
+function harvest(i){let p=state.plots[i];if(!p)return say("ยังไม่มีพืชให้เก็บ");if(!p.watered||Date.now()<p.readyAt)return say("พืชยังไม่พร้อมเก็บ");let c=crops.find(x=>x.id===p.crop);state.coins+=c.reward;state.qi+=c.qi;state.plots[i]=null;state.level=1+Math.floor(state.qi/10);say(`เก็บ${c.name}สำเร็จ! ได้ ${c.reward} เหรียญและ ${c.qi} พลังเซียน`);render()}
+$("plantBtn").onclick=()=>{let i=selectedPlot();if(i<0)return say("แปลงเต็มแล้ว เก็บเกี่ยวก่อนนะ");plant(i)};
+$("waterBtn").onclick=()=>{let i=state.plots.findIndex(p=>p&&!p.watered);if(i<0)i=state.plots.findIndex(p=>p&&p.watered&&Date.now()<p.readyAt);if(i<0)return say("ไม่มีพืชที่ต้องรดน้ำ");water(i)};
+$("harvestBtn").onclick=()=>{let i=state.plots.findIndex(p=>p&&p.watered&&Date.now()>=p.readyAt);if(i<0)return say("ยังไม่มีพืชที่พร้อมเก็บเกี่ยว");harvest(i)};
+$("petBtn").onclick=()=>{if(!state.petReady)return say("กวางแก้วกำลังพักฟื้น ลองใหม่ภายหลัง");state.coins+=15;state.qi+=1;state.petReady=false;$("petScene").textContent="🦌✨";say("กวางแก้วมอบน้ำค้างทิพย์ให้คุณ ได้ 15 เหรียญและ 1 พลังเซียน");render();setTimeout(()=>{state.petReady=true;$("petScene").textContent="🦌";say("กวางแก้วพร้อมมอบน้ำค้างทิพย์อีกครั้ง");render()},20000)};
+$("resetBtn").onclick=()=>{if(confirm("ต้องการเริ่มเกมใหม่และลบความคืบหน้าที่บันทึกไว้หรือไม่?")){state=defaultState();render();say("เริ่มต้นสวนสวรรค์แห่งใหม่แล้ว")}};
+setInterval(()=>{renderFarm()},1000);
+render();
+</script>
+</body>
+</html>
